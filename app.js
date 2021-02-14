@@ -52,8 +52,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let x = testSum(); 
-  let y = testMultiply(); 
+  let x = testSum(a,b,c); 
+  let y = testMultiply(a,b,c); 
 
   //eslint-disable-line
   return [x,y,`Third element: "${a} and ${b} and ${c} sum to ${x}."
@@ -106,11 +106,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+
+  let count =0 ;
+
+  let fisrtTwoIndex = multiply(testArray[0],testArray[1]);
+  let lastIndex = multiply(testArray[2],testArray[0]);
+count = lastIndex;
   //eslint-disable-line
+  return(count[0],`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${count[0]}.`)
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 

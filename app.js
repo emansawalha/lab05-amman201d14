@@ -52,11 +52,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  let z = testSum(); 
+  let x = testSum(); 
   let y = testMultiply(); 
 
   //eslint-disable-line
-  return [`Third element: "${a} and ${b} and ${c} sum to ${z}."
+  return [x,y,`Third element: "${a} and ${b} and ${c} sum to ${x}."
   "The product of ${a} and ${b} and ${c} is ${y}." ` ]
 }
 
@@ -79,7 +79,13 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
+  let count =0 ;
+
+  let fisrtTwoIndex = sum(testArray[0],testArray[1]);
+  let lastIndex = sum (testArray[2],testArray[0]);
+count = lastIndex;
   //eslint-disable-line
+  return(count[0],`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${count[0]} is their sum.`)
 }
 
 // Here is the test for sumArray(); uncomment it to run it
